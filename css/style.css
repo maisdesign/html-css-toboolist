@@ -21,3 +21,133 @@
     font-weight: bold;
     display: inline;
 }
+
+main{
+   background: #F6F8FA;
+    padding: 20px;
+}
+
+.container{
+    background-color: #fff;
+    margin:20px;
+    padding: 20px;
+}
+
+
+.head-buttons button{
+    display: inline-block;
+    margin: 20px;
+    padding: 5px 10px;
+    color: #FFF;
+    background-color: #46ace3;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.head-buttons button:hover{
+    background-color: #379ad6;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#addSectionButton{
+    background-color: #eee;
+    color:#888;
+    margin:0;
+}
+
+/* Stilizzazione dei li V3 ibrido unicode+matemetica */
+
+/* Layout base */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font: 16px/1.4 system-ui, sans-serif;
+}
+
+li {
+  position: relative;
+  padding: .4rem .5rem .4rem 20px;
+}
+
+/* Cerchietto comune */
+li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Spunta verde */
+li.done {
+  color: green;
+}
+li.done::after {
+  content: '✔'; /* carattere Unicode */
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  color: green;
+  transform: translateY(-50%);
+}
+
+/* X rossa */
+li.undone {
+  color: red;
+}
+li.undone::after {
+  content: '✖'; /* carattere Unicode */
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+  transform: translateY(-50%);
+}
+
+.tag{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 25px;
+    color: white;
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 1px #888;
+}
+
+.blue {
+    background-color: #46ace3;
+}
+
+.violet {
+    background-color: #9b75e4;
+}
+
+.green {
+    background-color: #72b9a6;
+}
+
+.orange {
+    background-color: #f19f30;
+}
+
+.pink {
+    background-color: #d7629e;
+}
+
+.olive {
+    background-color: #B0C923;
+}
