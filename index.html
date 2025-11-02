@@ -4,15 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>My To-Do List</h1>
-        <input type="text" id="taskInput" placeholder="Add a new task">
-        <button id="addTaskButton">Add Task</button>
-        <ul id="taskList"></ul>
-    </div>
-    <script src="script.js"></script>
+    <header id="top-header">
+        <img src="img/logo.png" alt="Toboolist Logo" id="logo">
+        <a href="#">
+            <h1 id="toph1">Toboolist</h1>
+        </a>
+    </header>
+    <main>
+        <div class="container">
+            <header class="head-buttons">
+                <button id="addTaskButton" class="btn-task">Add Task</button>
+                <button id="addSectionButton" class="btn-task">Add Section</button>
+            </header>
+            <article class="task-section">
+                <h2 class="section-title">New Task</h2>
+                <ul>
+                    <li class="done">Quarterly Newsletter <span class="tag blue">Editorial</span></li>
+                </ul>
+            </article>
+            <article class="task-section">
+                <h2 class="section-title">Today</h2>
+                <ul>
+                    <li class="done">Recruiting blog post <span class="tag blue">Editorial</span></li>
+                    <li class="done">Mobile app launch <span class="tag violet">Q1 Goals</span></li>
+                    <li class="undone">Interview John H. <span class="tag green">Recruiting</span></li>
+                    <li class="done">Summit update to mobile storefronts <span class="tag orange">Mobile</span></li>
+                </ul>
+            </article>
+            <article class="task-section">
+                <h2 class="section-title">Upcoming</h2>
+                <ul>
+                    <li class="undone">Schedule meeting with Alex <span class="tag pink">Website</span></li>
+                    <li class="done">Homepage refresh <span class="tag pink">Website</span></li>
+                    <li class="done">Onboard new Sales team members <span class="tag green">Sales</span></li>
+                    <li class="done">Review Editorial calendar <span class="tag blue">Editorial</span></li>
+                </ul>
+            </article>
+        </div>
+    </main>
 </body>
 </html>
