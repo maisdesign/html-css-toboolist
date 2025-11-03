@@ -5,6 +5,17 @@
     padding: 0;
 }
 
+#top-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 10px 20px;
+}
+
+#top-header img {
+    height: 50px;
+}
+
 #top-header a {
     display: inline;
     color:black;
@@ -12,39 +23,50 @@
 }
 
 #toph1 {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 36px;
-    color: #333;
+    color: #444;
     font-weight: bold;
-    display: inline;
 }
 
 main{
-   background: #F6F8FA;
+   background: #F7F9FA;
     padding: 20px;
 }
 
 .container{
-    background-color: #fff;
-    margin:20px;
+    margin:10px 40px;
     padding: 20px;
 }
 
+.head-buttons, .articles-container{
+    background-color: #fff;
+    padding: 0 0 0 20px;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.head-buttons{
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 .head-buttons button{
     display: inline-block;
-    margin: 20px;
+    margin: 20px 0;
     padding: 5px 10px;
     color: #FFF;
-    background-color: #46ace3;
+    background-color: #4DA3E6;
     border-radius: 5px;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: none
 }
 
 .head-buttons button:hover{
@@ -55,13 +77,52 @@ main{
 
 #addSectionButton{
     background-color: #eee;
-    color:#888;
+    color:#777;
     margin:0;
 }
 
-/* Stilizzazione dei li V3 ibrido unicode+matemetica */
+
+.spacer{
+    margin: 1px 0 0 20px;
+}
+/* Stilizzazione dei li V4 ibrido unicode+matemetica */
 
 /* Layout base */
+.task-section li{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: baseline;
+}
+
+.task-section li p {
+   margin: 0 0 0 10px;
+   font-weight: 500;
+   color: #333
+}
+
+/* Freccetta nera 🎶 a fianco dei titoli */
+
+.section-title{
+  position: relative;
+  padding-left: 18px;         /* spazio per la freccia */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  margin: 0;      /* allineamento visivo con il contenitore bianco */
+}
+
+.section-title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-45%);      /* leggero aggiustamento verticale */
+  /* triangolo verso il basso fatto coi bordi */
+  width: 0; height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #111;       /* colore della freccia */
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -74,47 +135,50 @@ li {
   padding: .4rem .5rem .4rem 20px;
 }
 
+li::before, li::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.55;
+}
 /* Cerchietto comune */
+
 li::before {
   content: '';
-  position: absolute;
   left: 0;
-  top: 50%;
-  width: 22px;
-  height: 22px;
+  width: 14px;
+  height: 14px;
   border: 2px solid currentColor;
   border-radius: 50%;
-  transform: translateY(-50%);
+}
+
+/* Spunte generiche */
+li::after {
+  left: 0.3rem;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 /* Spunta verde */
-li.done {
+
+li.done::before {
   color: green;
 }
+
 li.done::after {
   content: '✔'; /* carattere Unicode */
-  position: absolute;
-  left: 2px;
-  top: 50%;
-  font-size: 14px;
-  font-weight: bold;
   color: green;
-  transform: translateY(-50%);
 }
 
 /* X rossa */
-li.undone {
+
+li.undone::before {
   color: red;
 }
+
 li.undone::after {
   content: '✖'; /* carattere Unicode */
-  position: absolute;
-  left: 3px;
-  top: 50%;
-  font-size: 14px;
-  font-weight: bold;
   color: red;
-  transform: translateY(-50%);
 }
 
 .tag{
@@ -129,25 +193,25 @@ li.undone::after {
 }
 
 .blue {
-    background-color: #46ace3;
+    background-color: #4DA3E6;
 }
 
 .violet {
-    background-color: #9b75e4;
+    background-color: #9C75E2;
 }
 
 .green {
-    background-color: #72b9a6;
+    background-color: #75B9A5;
 }
 
 .orange {
-    background-color: #f19f30;
+    background-color: #F1A030;
 }
 
 .pink {
-    background-color: #d7629e;
+    background-color: #D7649E;
 }
 
 .olive {
-    background-color: #B0C923;
+    background-color: #B1C923;
 }
